@@ -10,7 +10,7 @@
           <x-splade-input :label="__('Birthday')" :placeholder="__('Birthday')" name="birthday" date />
           <x-splade-input :label="__('Time')" :placeholder="__('Time')" name="time" time="{ time_24hr: false }" />
           <x-tomato-admin-color :label="__('Color')" :placeholder="__('Color')" type='number' name="color" />
-          <x-splade-input :label="__('Icon')" name="icon" type="icon"  :placeholder="__('Icon')" />
+          <x-tomato-admin-icon :label="__('Icon')" name="icon" type="icon"  :placeholder="__('Icon')" />
           <x-tomato-admin-code :label="__('Html')" name="html" :placeholder="__('Html')" />
 
           <x-splade-checkbox :label="__('Is active')" name="is_active" label="Is active" />

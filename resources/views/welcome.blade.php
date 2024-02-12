@@ -1,24 +1,10 @@
-<div class="flex flex-col justify-center">
-    <div class="flex justify-end gap-4  underline mx-4 my-4 relative">
-        @if (Route::has('login') && Auth::check())
-            <x-splade-link href="{{ url('/admin') }}">Dashboard</x-splade-link>
-
-        @elseif (Route::has('login') && !Auth::check())
-            <x-splade-link href="{{ url('/login') }}">Login</x-splade-link>
-            <x-splade-link href="{{ url('/register') }}">Register</x-splade-link>
-        @endif
-    </div>
-
-    <div class="h-screen flex flex-col justify-center items-center">
-        <x-splade-link href="/" class="flex justify-center">
-            <x-application-logo />
-        </x-splade-link>
-
-        <div class="flex justify-center gap-4 my-4">
-            <a href="https://docs.tomatophp.com" target="_blank">Documentation</a>
-            <a href="https://discord.com/invite/VZc8nBJ3ZU" target="_blank">Discord</a>
-            <a href="https://x.com/engfadymondy" target="_blank">Twitter</a>
-            <a href="https://www.github.com/tomatophp" target="_blank">Github</a>
-        </div>
+<div class="h-screen flex flex-col justify-center items-center gap-4 bg-gray-900">
+    <x-splade-link :href="route('login')">
+        <x-tomato-application-logo class="w-16 h-16" />
+    </x-splade-link>
+    <div class="text-center">
+        <h1 class="font-bold text-3xl text-white">{{ config('app.name') }}</h1>
+        <p class="text-gray-400 text-lg"> <b>Laravel</b> v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</p>
+        <p class="text-gray-400"><b>Tomato</b> v{{ \Composer\InstalledVersions::getVersion('tomatophp/tomato-admin') }} | <a target="_blank" href="https://docs.tomatophp.com" class="underline"><i class="bx bx-file text-md text-green-500"></i> Docs</a> | <a target="_blank" href="https://discord.gg/VZc8nBJ3ZU" class="underline"><i class="bx bxl-discord text-md  text-primary-500"></i> Discord</a> | <a target="_blank" href="https://github.com/sponsors/3x1io" class="underline"><i class="bx bxs-heart text-danger-500 text-md"></i> Sponsor</a> | <a target="_blank" href="https://github.com/tomatophp" class="underline"><i class="bx bxl-github text-white text-md"></i> GitHub</a></p>
     </div>
 </div>
