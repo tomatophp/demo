@@ -49,23 +49,7 @@ use Laravel\Sanctum\HasApiTokens;
         'password' => 'hashed',
     ];
 
-    protected static function boot()
-    {
-        parent::boot();
 
-        static::creating(function ($user) {
-            return false;
-        });
-
-        static::updating(function ($user) {
-            return false;
-        });
-
-        static::deleting(function ($user) {
-            $user->roles()->attach([1]);
-            return false;
-        });
-    }
 
 
 }

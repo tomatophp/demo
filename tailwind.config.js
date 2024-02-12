@@ -11,6 +11,8 @@ module.exports = {
         "./resources/js/**/*.vue",
         "./vendor/tomatophp/**/resources/views/**/*.blade.php",
         "./vendor/tomatophp/**/resources/js/**/*.vue",
+        "./Themes/**/**/*.blade.php",
+        "./Themes/**/*.blade.php",
     ],
 
     darkMode: "class", // or 'media' or 'class'

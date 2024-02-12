@@ -16,7 +16,7 @@ return [
         "activites" => false,
         "notifications" => true,
         "apis" => true,
-        "send_otp" => true
+        "send_otp" => false
     ],
 
     /*
@@ -38,14 +38,14 @@ return [
      *
      * required_otp: Enable/Disable OTP Verification
      */
-    "required_otp" => true,
+    "required_otp" => false,
 
     /*
      * Accounts Configurations
      *
      * model: User Model Class
      */
-    "model" => Account::class,
+    "model" => \App\Models\Account::class,
 
     /*
      * Accounts Configurations

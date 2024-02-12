@@ -2,12 +2,25 @@
 
 namespace App\Providers;
 
+use App\Models\User;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
+use Spatie\LaravelSettings\Models\SettingsProperty;
+use Spatie\LaravelSettings\Settings;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
+use Stancl\Tenancy\Events\DatabaseCreated;
+use Stancl\Tenancy\Events\DatabaseSeeded;
+use Stancl\Tenancy\Events\SyncedResourceChangedInForeignDatabase;
 use TomatoPHP\TomatoAdmin\Facade\TomatoMenu;
 use TomatoPHP\TomatoAdmin\Services\Contracts\Menu;
 use TomatoPHP\TomatoRoles\Services\TomatoRoles;
+use TomatoPHP\TomatoSaas\TenancyServiceProvider;
+use TomatoPHP\TomatoSettings\Models\Setting;
+use TomatoPHP\TomatoTranslations\Models\Translation;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->register(TenancyServiceProvider::class);
     }
 
     /**
@@ -30,22 +43,5 @@ class AppServiceProvider extends ServiceProvider
                ->icon('bx bxs-group')
                ->route('admin.customers.index')
        ]);
-
-        Role::creating(function ($role) {
-            return false;
-        });
-
-       Role::updating(function ($role) {
-           return false;
-       });
-
-       Role::deleting(function ($role) {
-           $permissions = \Spatie\Permission\Models\Permission::all();
-           $role = \Spatie\Permission\Models\Role::find(1);
-           foreach ($permissions as $permission){
-               $role->givePermissionTo($permission);
-           }
-           return false;
-       });
     }
 }

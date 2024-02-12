@@ -1,0 +1,23 @@
+{
+    "name": "Ecommerce",
+    "title": {
+        "ar": "",
+        "en": "ecommerce"
+    },
+    "description": {
+        "ar": "",
+        "en": "E-commerce Theme For TomatoPHP Ecommerce"
+    },
+    "keywords": [
+        "laravel",
+        "themes",
+        "tomato",
+        "splade"
+    ],
+    "placeholder": "placeholder.png",
+    "alias": "ecommerce",
+    "settings": {},
+    "menus": [],
+    "required": {},
+    "active": true
+}
