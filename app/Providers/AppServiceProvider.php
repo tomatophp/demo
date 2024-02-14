@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
@@ -73,7 +74,5 @@ class AppServiceProvider extends ServiceProvider
            __('Eddy') => "bx bxs-data",
            __('Settings') => "bx bxs-cog",
        ]);
-
-
     }
 }
