@@ -1,4 +1,7 @@
-<x-tomato-admin-container label="{{__('Create New Demo')}}">
+<x-splade-modal>
+    <x-slot:title>
+        {{__('Create New Demo')}}
+    </x-slot:title>
     <x-splade-form :default="['plan' => 'free', 'type'=>'store']" class="grid grid-cols-2 gap-4" action="{{route('home.demo.store')}}" method="post">
         <x-splade-input class="col-span-2" label="{{__('Sub Domain')}}" name="username" type="text"  placeholder="username">
             <x-slot name="append">
@@ -24,4 +27,4 @@
             <x-tomato-admin-button secondary :href="route('admin.syncs.index')" label="{{__('Cancel')}}"/>
         </div>
     </x-splade-form>
-</x-tomato-admin-container>
+</x-splade-modal>

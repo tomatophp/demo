@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
+use ProtoneMedia\Splade\Facades\Splade;
 use Spatie\LaravelSettings\Models\SettingsProperty;
 use Spatie\LaravelSettings\Settings;
 use Spatie\Permission\Models\Permission;
@@ -43,5 +44,7 @@ class AppServiceProvider extends ServiceProvider
                ->icon('bx bxs-group')
                ->route('admin.customers.index')
        ]);
+
+       Splade::defaultModalCloseExplicitly(true);
     }
 }

@@ -30,6 +30,8 @@ use TomatoPHP\TomatoOrders\Services\Traits\InteractsWithOrders;
  * @property string $otp_activated_at
  * @property string $last_login
  * @property string $agent
+ * @property string $email
+ * @property string $phone
  * @property string $host
  * @property integer $attempts
  * @property boolean $login
