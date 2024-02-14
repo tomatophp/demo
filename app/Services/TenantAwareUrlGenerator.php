@@ -11,14 +11,8 @@ class TenantAwareUrlGenerator extends BaseUrlGenerator
 {
     public function getUrl(): string
     {
-        if(config('tenancy.central_domains.0') === $_SERVER['HTTP_HOST'])
-        {
-            $url = asset('/storage/'.$this->getPathRelativeToRoot());
-        }
-        else
-        {
-            $url = tenant_asset($this->getPathRelativeToRoot());
-        }
+        $url = asset($this->getPathRelativeToRoot());
+
 
         $url = $this->versionUrl($url);
 
