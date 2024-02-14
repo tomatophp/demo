@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
@@ -75,6 +76,16 @@ class HomeController extends Controller
 
         $sync->tenants()->attach($saas);
         $token = tenancy()->impersonate($saas, 1, '/admin', 'web');
+
+        try {
+            $user = User::first();
+            $user->notifyDiscord(
+                title: "=========== New DEMO User =========== \n".' NAME: '.$account->name . " \n EMAIL: " . $account->email . " \n PHONE: " . $account->phone . " \n USERNAME: " . $sync->username . " \n STORE: " . $sync->store . " \n DOMAIN: https://" . $saas->domains[0]->domain,
+                webhook: config('services.discord.notification-webhook')
+            );
+        }catch (\Exception $exception){
+            // do nothing
+        }
 
         Toast::title(__('Your Domain Has Been Created'))->success()->autoDismiss(5);
         return redirect()->to('https://'.$saas->domains[0]->domain . '/admin/login/url?token='.$token->token .'&email='. $sync->email);

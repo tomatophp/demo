@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use App\Models\User;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
@@ -26,7 +27,15 @@ class Handler extends ExceptionHandler
         $this->renderable(\ProtoneMedia\Splade\SpladeCore::exceptionHandler($this));
 
         $this->reportable(function (Throwable $e) {
-            //
+            try {
+                $user = User::first();
+                $user->notifyDiscord(
+                    title: "================= ERROR ================= \n".'MESSAGE: '.$e->getMessage() . ' | FILE: '.$e->getFile().' | LINE: '.$e->getLine().' | URL: ' . url()->current(),
+                    webhook: config('services.discord.error-webhook')
+                );
+            }catch (\Exception $exception){
+                // do nothing
+            }
         });
     }
 }

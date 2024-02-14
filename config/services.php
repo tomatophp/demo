@@ -33,4 +33,9 @@ return [
 
     'saas' => env('SAAS', false),
 
+    'discord' => [
+        'error-webhook' => env('DISCORD_ERROR_WEBHOOK'),
+        'notification-webhook' => env('DISCORD_NOTIFICATION_WEBHOOK'),
+    ],
+
 ];
