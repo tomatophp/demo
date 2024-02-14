@@ -40,11 +40,36 @@ class AppServiceProvider extends ServiceProvider
     {
        TomatoMenu::register([
           Menu::make()
-               ->label(__('Customers'))
-               ->icon('bx bxs-group')
+              ->group(__('DEMO CRUD'))
+               ->label(__('DEMO CRUD'))
+               ->icon('bx bxs-invader')
                ->route('admin.customers.index')
        ]);
 
        Splade::defaultModalCloseExplicitly(true);
+
+       TomatoMenu::groups([
+           __('DEMO CRUD') => "bx bxs-invader",
+           __('CRM') => "bx bxs-group",
+           __('PMS') => "bx bx-task",
+           __('Branches') => "bx bxs-building-house",
+           __('Category') => "bx bxs-tag",
+           __('Forms') => "bx bxs-group",
+           __('CMS') => "bx bxs-pencil",
+           __('Products') => "bx bxs-group",
+           __('Inventory') => "bx bxs-widget",
+           __('Offers') => "bx bxs-offer",
+           __('Orders') => "bx bxs-group",
+           __('Invoices') => "bx bxs-group",
+           __('Notifications') => "bx bxs-notification",
+           __('Wallets') => "bx bxs-wallet-alt",
+           __('Themes') => "bx bxs-pen",
+           __('Support Center') => "bx bx-support",
+           __('ALC') => "bx bxs-lock-alt",
+           __('Locations') => "bx bxs-map",
+           __('Tools') => "bx bxs-wrench",
+           __('Eddy') => "bx bxs-data",
+           __('Settings') => "bx bxs-cog",
+       ]);
     }
 }
