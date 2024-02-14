@@ -13066,16 +13066,16 @@
         },
         {
             "name": "tomatophp/tomato-sections",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomatophp/tomato-sections.git",
-                "reference": "0fc11f815bf17c633b816337d84649cefbbc5894"
+                "reference": "a67b252d7aeafbb1a1cd94180a45adf5eb16128d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomatophp/tomato-sections/zipball/0fc11f815bf17c633b816337d84649cefbbc5894",
-                "reference": "0fc11f815bf17c633b816337d84649cefbbc5894",
+                "url": "https://api.github.com/repos/tomatophp/tomato-sections/zipball/a67b252d7aeafbb1a1cd94180a45adf5eb16128d",
+                "reference": "a67b252d7aeafbb1a1cd94180a45adf5eb16128d",
                 "shasum": ""
             },
             "require": {
@@ -13123,7 +13123,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tomatophp/tomato-sections/issues",
-                "source": "https://github.com/tomatophp/tomato-sections/tree/v1.0.4"
+                "source": "https://github.com/tomatophp/tomato-sections/tree/v1.0.5"
             },
             "funding": [
                 {
@@ -13131,7 +13131,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-28T14:36:22+00:00"
+            "time": "2024-02-14T14:53:42+00:00"
         },
         {
             "name": "tomatophp/tomato-settings",
