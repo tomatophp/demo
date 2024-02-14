@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
 use ProtoneMedia\Splade\Facades\Toast;
 use TomatoPHP\TomatoSaas\Models\CentralUser;
 use TomatoPHP\TomatoSaas\Models\Tenant;
@@ -24,7 +25,20 @@ Route::middleware(['splade'])->group(function () {
             return view('demo');
         })->name('home.demo');
         Route::post('/demo', function (\TomatoPHP\TomatoSaas\Http\Requests\Sync\SyncStoreRequest $request){
-            $request->validated();
+            $request->validated([
+                'first_name' => 'required|string|max:255',
+                'last_name' => 'required|string|max:255',
+                'email' => 'required|string|email|max:255',
+                'phone' => 'required|string|max:255',
+                'username' => [
+                    'required',
+                    'regex:/^[a-zA-Z]*$/',
+                    'min:3',
+                    Rule::unique('syncs', 'username')
+                ],
+                'password' => 'required|min:6|confirmed|string|max:255',
+                'store' => 'required|string|max:255',
+            ]);
 
             $sync = new CentralUser();
             $sync->global_id = $request->get('username');
