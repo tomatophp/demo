@@ -73,5 +73,7 @@ class AppServiceProvider extends ServiceProvider
            __('Eddy') => "bx bxs-data",
            __('Settings') => "bx bxs-cog",
        ]);
+
+
     }
 }

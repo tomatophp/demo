@@ -13412,16 +13412,16 @@
         },
         {
             "name": "tomatophp/tomato-themes",
-            "version": "v1.1.13",
+            "version": "v1.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomatophp/tomato-themes.git",
-                "reference": "03efcfa9f6346b4a171990fb017c4ce739893a4d"
+                "reference": "1db7c931cbe995494c3bef5a05788ce375aa90e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomatophp/tomato-themes/zipball/03efcfa9f6346b4a171990fb017c4ce739893a4d",
-                "reference": "03efcfa9f6346b4a171990fb017c4ce739893a4d",
+                "url": "https://api.github.com/repos/tomatophp/tomato-themes/zipball/1db7c931cbe995494c3bef5a05788ce375aa90e4",
+                "reference": "1db7c931cbe995494c3bef5a05788ce375aa90e4",
                 "shasum": ""
             },
             "require": {
@@ -13464,7 +13464,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tomatophp/tomato-themes/issues",
-                "source": "https://github.com/tomatophp/tomato-themes/tree/v1.1.13"
+                "source": "https://github.com/tomatophp/tomato-themes/tree/v1.1.14"
             },
             "funding": [
                 {
@@ -13472,7 +13472,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-28T14:36:51+00:00"
+            "time": "2024-02-14T14:02:24+00:00"
         },
         {
             "name": "tomatophp/tomato-timer",
