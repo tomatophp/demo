@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use App\Models\User;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Support\Str;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -24,6 +25,12 @@ class Handler extends ExceptionHandler
      */
     public function register(): void
     {
+        $this->reportable(function (Throwable $e) {
+            if(Str::contains($e->getMessage(), 'Tenant could not be identified on domain')){
+                abort(404, 'Tenant not found');
+            }
+        });
+
         $this->renderable(\ProtoneMedia\Splade\SpladeCore::exceptionHandler($this));
 
         $this->reportable(function (Throwable $e) {
@@ -37,5 +44,7 @@ class Handler extends ExceptionHandler
                 // do nothing
             }
         });
+
+
     }
 }
