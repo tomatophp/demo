@@ -178,12 +178,7 @@
             <h3>Oops! Server Error</h3>
             <h1><span>5</span><span>0</span><span>0</span></h1>
         </div>
-        <h2>we are sorry, there is a problem on the server</h2>
-        <form method="POST" action="{{ route('home.report') }}">
-            @csrf
-            <input type="hidden" name="error" value="{{ $exception }}">
-            <button class="button-27" role="button" type="submit">Report A Problem</button>
-        </form>
+        <h2>we are sorry, there is a problem on the server, your problem has been reported!</h2>
     </div>
 </div>
 </body>
