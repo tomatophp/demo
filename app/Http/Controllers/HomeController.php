@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
+use ProtoneMedia\Splade\Facades\Splade;
 use ProtoneMedia\Splade\Facades\Toast;
 use TomatoPHP\TomatoCategory\Models\Type;
 use TomatoPHP\TomatoCrm\Models\Contact;
@@ -29,7 +30,7 @@ class HomeController extends Controller
         $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255',
+            'email' => 'required|string|email|max:255|unique:accounts,email',
             'phone' => 'required|string|max:255',
             'username' => [
                 'required',
@@ -89,44 +90,5 @@ class HomeController extends Controller
 
         Toast::title(__('Your Domain Has Been Created'))->success()->autoDismiss(5);
         return redirect()->to('https://'.$saas->domains[0]->domain . '/admin/login/url?token='.$token->token .'&email='. $sync->email);
-    }
-
-    public function report(Request $request)
-    {
-        $request->validate([
-           "error" => "required"
-        ]);
-
-        $getErrorType = Type::where('key', 'error')->where('for', 'contact')->where('type', 'type')->first();
-        if(!$getErrorType){
-            $getErrorType = new Type();
-            $getErrorType->name = "Error";
-            $getErrorType->key = "error";
-            $getErrorType->for = "contact";
-            $getErrorType->type = "type";
-            $getErrorType->save();
-        }
-
-        $getPendingStatus = Type::where('key', 'pending')->where('for', 'contact')->where('type', 'status')->first();
-        if(!$getPendingStatus){
-            $getPendingStatus = new Type();
-            $getPendingStatus->name = "Pending";
-            $getPendingStatus->key = "pending";
-            $getPendingStatus->for = "contact";
-            $getPendingStatus->type = "status";
-            $getPendingStatus->save();
-        }
-
-        Contact::create([
-            "type_id" => $getErrorType->id,
-            "status_id" => $getPendingStatus->id,
-            "name" => "from server",
-            "email" => "admin@admin.com",
-            "phone" => "admin@admin.com",
-            "subject" => "ERROR",
-            "message" => $request->get('error'),
-        ]);
-
-        return redirect()->away('https://tomatophp.com');
     }
 }

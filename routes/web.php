@@ -18,7 +18,6 @@ use TomatoPHP\TomatoSaas\Models\Tenant;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::middleware(['splade'])->group(function () {
     if (isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] === config('tenancy.central_domains.0')) {
         Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');

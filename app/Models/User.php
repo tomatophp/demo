@@ -10,6 +10,7 @@ use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
  use Spatie\Permission\Traits\HasRoles;
+ use TomatoPHP\TomatoEddy\Models\Traits\InteractsWithEddy;
  use TomatoPHP\TomatoNotifications\Traits\InteractWithNotifications;
 
  class User extends Authenticatable
@@ -19,6 +20,7 @@ use Laravel\Sanctum\HasApiTokens;
     use HasProfilePhoto;
     use HasRoles;
     use InteractWithNotifications;
+    use InteractsWithEddy;
 
     /**
      * The attributes that are mass assignable.
