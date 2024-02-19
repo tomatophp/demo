@@ -37,7 +37,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        run: mysql -h 127.0.0.1 --port 3306 -u root -password -e 'CREATE DATABASE IF NOT EXISTS laravel;'
+      - run: mysql -h 127.0.0.1 --port 3306 -u root -password -e 'CREATE DATABASE IF NOT EXISTS laravel;'
 
 
       - name: Setup PHP
