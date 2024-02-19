@@ -36,6 +36,16 @@ class CheckoutController extends Controller
     public function index(){
         $carts = Cart::where('session_id', Cookie::get('cart'))->get();
         $shippers = ShippingVendor::where('is_activated', 1)->get();
+        if(count($shippers) < 1){
+            ShippingVendor::query()->create([
+                "name" => "Store",
+                "delivery_estimation" => "24h",
+                "contact_person" => "Store",
+                "phone" => "+1234567890",
+                "address" => "Store",
+                "is_activated" => 1,
+            ]);
+        }
 
 
         if($carts->count()){

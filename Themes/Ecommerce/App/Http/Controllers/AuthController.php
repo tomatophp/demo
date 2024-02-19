@@ -2,6 +2,7 @@
 
 namespace Themes\Ecommerce\App\Http\Controllers;
 
+use App\Models\Account;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -14,8 +15,8 @@ class AuthController extends Controller
     {
         TomatoAuth::loginBy('email');
         TomatoAuth::guard('accounts');
-        TomatoAuth::requiredOtp(config('tomato-crm.required_otp'));
-        TomatoAuth::model(config('tomato-crm.model'));
+        TomatoAuth::requiredOtp(true);
+        TomatoAuth::model(Account::class);
         TomatoAuth::createValidation([
             "name" => "required|max:191|string",
             "phone" => "required|max:14|string|unique:accounts,phone",
@@ -70,16 +71,10 @@ class AuthController extends Controller
             type: 'web'
         );
         if($register->success){
-            if(config('tomato-crm.required_otp')){
-                session()->put('email', $request->get('email'));
+            session()->put('email', $request->get('email'));
 
-                Toast::success($register->message)->autoDismiss(2);
-                return redirect()->route('accounts.otp');
-            }
-            else {
-                Toast::success($register->message)->autoDismiss(2);
-                return redirect()->route('accounts.login');
-            }
+            Toast::success($register->message)->autoDismiss(2);
+            return redirect()->route('accounts.otp');
         }
         else {
             Toast::danger($register->message)->autoDismiss(2);
