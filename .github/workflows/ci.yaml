@@ -16,7 +16,7 @@ jobs:
       DB_PASSWORD: password
     services:
       mysql:
-        image: mysql:8.0.21
+        image: mysql:8.0
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: true
           MYSQL_DATABASE: laravel
