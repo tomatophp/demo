@@ -16,13 +16,12 @@ jobs:
       DB_PASSWORD: password
     services:
       mysql:
-        image: mysql:latest
+        image: mysql:8.0.21
         env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: false
-          MYSQL_ROOT_PASSWORD: password
+          MYSQL_ALLOW_EMPTY_PASSWORD: true
           MYSQL_DATABASE: laravel
         ports:
-          - 3306/tcp
+          - 3306/3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
       redis:
@@ -43,7 +42,7 @@ jobs:
           sudo /etc/init.d/mysql start
           sudo systemctl enable mysql.service
           sudo systemctl start mysql.service
-          mysql -h 127.0.0.1 --port 3306 -uroot -ppassword -e 'CREATE DATABASE IF NOT EXISTS laravel;'
+          mysql -h 127.0.0.1 --port 3306 -uroot 'CREATE DATABASE IF NOT EXISTS laravel;'
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
