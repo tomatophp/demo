@@ -12538,16 +12538,16 @@
         },
         {
             "name": "tomatophp/tomato-orders",
-            "version": "v1.0.18",
+            "version": "v1.0.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomatophp/tomato-orders.git",
-                "reference": "f61056e7c41863206e03ee2d8a9976c304315935"
+                "reference": "12c5c3601874ab7d9471a37faa0fb9e627f30685"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomatophp/tomato-orders/zipball/f61056e7c41863206e03ee2d8a9976c304315935",
-                "reference": "f61056e7c41863206e03ee2d8a9976c304315935",
+                "url": "https://api.github.com/repos/tomatophp/tomato-orders/zipball/12c5c3601874ab7d9471a37faa0fb9e627f30685",
+                "reference": "12c5c3601874ab7d9471a37faa0fb9e627f30685",
                 "shasum": ""
             },
             "require": {
@@ -12596,7 +12596,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tomatophp/tomato-orders/issues",
-                "source": "https://github.com/tomatophp/tomato-orders/tree/v1.0.18"
+                "source": "https://github.com/tomatophp/tomato-orders/tree/v1.0.20"
             },
             "funding": [
                 {
@@ -12604,7 +12604,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-31T11:40:41+00:00"
+            "time": "2024-02-20T11:45:34+00:00"
         },
         {
             "name": "tomatophp/tomato-php",

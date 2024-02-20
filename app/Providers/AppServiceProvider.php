@@ -62,7 +62,7 @@ class AppServiceProvider extends ServiceProvider
            __('Products') => "bx bxs-group",
            __('Inventory') => "bx bxs-widget",
            __('Offers') => "bx bxs-offer",
-           __('Orders') => "bx bxs-group",
+           __('Ordering') => "bx bxs-receipt",
            __('Invoices') => "bx bxs-group",
            __('Notifications') => "bx bxs-notification",
            __('Wallets') => "bx bxs-wallet-alt",
