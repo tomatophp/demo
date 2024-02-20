@@ -18,8 +18,7 @@ jobs:
       mysql:
         image: mysql:latest
         env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: false
-          MYSQL_ROOT_PASSWORD: password
+          MYSQL_ALLOW_EMPTY_PASSWORD: true
           MYSQL_DATABASE: laravel
         ports:
           - 3306/tcp
@@ -37,8 +36,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        run: mysql -h 127.0.0.1 --port 3306 -u root -password -e 'CREATE DATABASE IF NOT EXISTS laravel;'
-
+      - name: Check MySQL Server
+        run: |
+          echo -e "Start MYSQL service, it is off by default\n"
+          sudo /etc/init.d/mysql start
+          sudo systemctl enable mysql.service
+          sudo systemctl start mysql.service
+          mysql -h 127.0.0.1 --port 3306 -uroot 'CREATE DATABASE IF NOT EXISTS laravel;'
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -49,13 +53,6 @@ jobs:
 
       - name: Copy .env Before Install Composer
         run: php -r "file_exists('.env') || copy('.env.example', '.env');  echo file_get_contents('.env');"
-
-      - name: Start MySQL Service
-        run: |
-          echo -e "Start MYSQL service, it is off by default\n"
-          sudo /etc/init.d/mysql start
-          sudo systemctl enable mysql.service
-          sudo systemctl start mysql.service
 
       - name: Get composer cache directory
         id: composer-cache
