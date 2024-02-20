@@ -12353,16 +12353,16 @@
         },
         {
             "name": "tomatophp/tomato-menus",
-            "version": "v1.1.5",
+            "version": "v1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomatophp/tomato-menus.git",
-                "reference": "95b7c4234951db6d7caefc4ed2a12ff95620f70a"
+                "reference": "fab0043c32a6072357673c08b7b2569239c53524"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomatophp/tomato-menus/zipball/95b7c4234951db6d7caefc4ed2a12ff95620f70a",
-                "reference": "95b7c4234951db6d7caefc4ed2a12ff95620f70a",
+                "url": "https://api.github.com/repos/tomatophp/tomato-menus/zipball/fab0043c32a6072357673c08b7b2569239c53524",
+                "reference": "fab0043c32a6072357673c08b7b2569239c53524",
                 "shasum": ""
             },
             "require": {
@@ -12401,7 +12401,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tomatophp/tomato-menus/issues",
-                "source": "https://github.com/tomatophp/tomato-menus/tree/v1.1.5"
+                "source": "https://github.com/tomatophp/tomato-menus/tree/v1.1.6"
             },
             "funding": [
                 {
@@ -12409,7 +12409,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-08T11:51:53+00:00"
+            "time": "2024-02-20T11:31:44+00:00"
         },
         {
             "name": "tomatophp/tomato-model-generator",
