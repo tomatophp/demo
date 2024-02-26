@@ -25,7 +25,9 @@ return [
     */
     "locals" => [
         "en" => "English",
-        "ar" => "Arabic"
+        "ar" => "Arabic",
+        "gr" => "Germany",
+        "es" => "Spanish",
     ],
 
     /*
