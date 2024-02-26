@@ -25,7 +25,9 @@ return [
     */
     "locals" => [
         "en" => "English",
-        "ar" => "Arabic"
+        "ar" => "Arabic",
+        "gr" => "Germany",
+        "es" => "Spanish",
     ],
 
     /*
@@ -81,6 +83,6 @@ return [
 
     "google_key" => env('GOOGLE_API', null),
 
-    "allow_gui" => false
+    "allow_gui" => true
 
 ];
