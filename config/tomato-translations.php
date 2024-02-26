@@ -83,6 +83,6 @@ return [
 
     "google_key" => env('GOOGLE_API', null),
 
-    "allow_gui" => true
+    "allow_gui" => false
 
 ];
