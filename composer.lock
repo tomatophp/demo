@@ -11517,16 +11517,16 @@
         },
         {
             "name": "tomatophp/tomato-saas",
-            "version": "v1.1.3",
+            "version": "v1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomatophp/tomato-saas.git",
-                "reference": "145b83d2ab7e830b605666e35ab804bf8ba0dc99"
+                "reference": "fcc1e0bc946e8b68cdf806a6eb912ca8533013e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomatophp/tomato-saas/zipball/145b83d2ab7e830b605666e35ab804bf8ba0dc99",
-                "reference": "145b83d2ab7e830b605666e35ab804bf8ba0dc99",
+                "url": "https://api.github.com/repos/tomatophp/tomato-saas/zipball/fcc1e0bc946e8b68cdf806a6eb912ca8533013e1",
+                "reference": "fcc1e0bc946e8b68cdf806a6eb912ca8533013e1",
                 "shasum": ""
             },
             "require": {
@@ -11566,7 +11566,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tomatophp/tomato-saas/issues",
-                "source": "https://github.com/tomatophp/tomato-saas/tree/v1.1.3"
+                "source": "https://github.com/tomatophp/tomato-saas/tree/v1.1.4"
             },
             "funding": [
                 {
@@ -11574,7 +11574,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-06-03T09:42:11+00:00"
+            "time": "2024-06-03T11:23:17+00:00"
         },
         {
             "name": "tomatophp/tomato-sections",
