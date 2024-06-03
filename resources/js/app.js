@@ -42,7 +42,6 @@ createApp({
         view_transitions: false
     })
     .component("Swiper", Swiper)
-    .component("TomatoDiagram", TomatoDiagram)
     .component("SwiperSlide", SwiperSlide)
     .component('TomatoTable', TomatoTable)
     .component('TomatoTooltip', TomatoTooltip)
