@@ -12,7 +12,7 @@ Route::middleware(['splade','web'])->name('home.')->group(function() {
     Route::get('/terms', [\Modules\EcommerceTheme\App\Http\Controllers\HomeController::class, 'terms'])->name('terms');
     Route::get('/privacy', [\Modules\EcommerceTheme\App\Http\Controllers\HomeController::class, 'privacy'])->name('privacy');
     Route::get('/returns', [\Modules\EcommerceTheme\App\Http\Controllers\HomeController::class, 'returns'])->name('returns');
-    Route::post('/contact', [\Modules\EcommerceTheme\App\Http\Controllers\HomeController::class, 'send'])->name('contact');
+    Route::post('/contact', [\Modules\EcommerceTheme\App\Http\Controllers\HomeController::class, 'send'])->name('contact.send');
     Route::post('/contact-form', [\Modules\EcommerceTheme\App\Http\Controllers\HomeController::class, 'form'])->name('form');
 });
 
