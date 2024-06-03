@@ -10502,16 +10502,16 @@
         },
         {
             "name": "tomatophp/tomato-category",
-            "version": "v1.1.9",
+            "version": "v1.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomatophp/tomato-category.git",
-                "reference": "293ddadcc0acffd43061dcf271d7eecda7f4cf4f"
+                "reference": "c78de021e228ea0bfafa0013eae3639432f3c89c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomatophp/tomato-category/zipball/293ddadcc0acffd43061dcf271d7eecda7f4cf4f",
-                "reference": "293ddadcc0acffd43061dcf271d7eecda7f4cf4f",
+                "url": "https://api.github.com/repos/tomatophp/tomato-category/zipball/c78de021e228ea0bfafa0013eae3639432f3c89c",
+                "reference": "c78de021e228ea0bfafa0013eae3639432f3c89c",
                 "shasum": ""
             },
             "require": {
@@ -10551,7 +10551,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tomatophp/tomato-category/issues",
-                "source": "https://github.com/tomatophp/tomato-category/tree/v1.1.9"
+                "source": "https://github.com/tomatophp/tomato-category/tree/v1.1.10"
             },
             "funding": [
                 {
@@ -10559,7 +10559,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-04T12:46:31+00:00"
+            "time": "2024-06-03T10:01:05+00:00"
         },
         {
             "name": "tomatophp/tomato-cms",
