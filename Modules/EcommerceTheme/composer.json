@@ -1,0 +1,50 @@
+{
+    "name": "tomatophp/ecommerce-theme-module",
+    "description": "E-commerce Theme For TomatoPHP Ecommerce",
+    "type": "laravel-module",
+    "keywords": [
+        "php",
+        "laravel",
+        "tomatophp",
+        "ecommerce",
+        "splade",
+        "theme"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fady Mondy",
+            "email": "info@3x1.io"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\EcommerceTheme\\": "",
+            "Modules\\EcommerceTheme\\App\\": "app/",
+            "Modules\\EcommerceTheme\\Database\\Factories\\": "database/factories/",
+            "Modules\\EcommerceTheme\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\EcommerceTheme\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.1|^8.2",
+        "tomatophp/console-helpers": "^1.1",
+        "tomatophp/tomato-admin": "^1.2",
+        "tomatophp/tomato-sections": "^1.0",
+        "nwidart/laravel-modules": "^10.0",
+        "tomatophp/tomato-ecommerce": "^1.0",
+        "joshbrw/laravel-module-installer": "^2.0"
+    }
+}

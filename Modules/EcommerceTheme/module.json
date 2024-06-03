@@ -1,0 +1,18 @@
+{
+    "name": "EcommerceTheme",
+    "alias": "ecommerce-theme",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\EcommerceTheme\\App\\Providers\\EcommerceThemeServiceProvider"
+    ],
+    "files": [],
+    "active": true,
+    "title": {
+        "ar": "",
+        "en": "Ecommerce Theme"
+    },
+    "type": "theme",
+    "placeholder": "https:\/\/3086187608-files.gitbook.io\/~\/files\/v0\/b\/gitbook-x-prod.appspot.com\/o\/spaces%2FSlG6RrSDmGrQX2xjM6AT%2Fuploads%2FTvCX56nmfAJhBNJSr9JA%2FScreenshot%202023-11-23%20at%204.52.57%E2%80%AFPM.png?alt=media&token=b1b2201b-dc1a-4fae-b015-be8c5e58e360"
+}
