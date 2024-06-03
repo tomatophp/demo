@@ -32,9 +32,6 @@ import { MdEditor, MdPreview } from 'md-editor-v3';
 import 'md-editor-v3/lib/style.css';
 
 
-import TomatoDiagram from "../../vendor/tomatophp/tomato-builder/resources/js/components/TomatoDiagram.vue";
-
-
 createApp({
     render: renderSpladeApp({ el }),
 })
